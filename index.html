@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}</script>
   <noscript><style>.loader{display:none}body.is-loading{overflow:auto}</style></noscript>
 </head>
 <body class="is-loading">
@@ -36,6 +37,10 @@
       <a href="#films" data-scroll><span data-text="Films">Films</span></a>
       <a href="#social" data-scroll><span data-text="Social">Social</span></a>
       <a href="#about" data-scroll><span data-text="About">About</span></a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Light / dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
       <a href="#contact" data-scroll class="nav-cta">Let's talk</a>
     </nav>
   </header>
@@ -58,7 +63,7 @@
           <span class="line"><span class="split">feelings.</span></span>
         </h1>
         <div class="hero-foot">
-          <p class="hero-desc">I edit and animate social content and cinematic brand films — paced to the frame, built to be felt.</p>
+          <p class="hero-desc">I cover the full editing process for social media content and brand films, including motion graphics and animation.</p>
           <p class="hero-status mono"><i class="rec-dot"></i> Available for projects — 2026</p>
           <a href="#reel" class="scroll-cue mono" data-scroll>Scroll <span class="cue-bar"><i></i></span></a>
         </div>
@@ -81,7 +86,7 @@
     <!-- ===================== MARQUEE ===================== -->
     <section class="marquee" aria-label="Services">
       <div class="marquee-track">
-        <span>Editing</span><i></i><span><em>Motion design</em></span><i></i><span>Color grading</span><i></i><span><em>Sound design</em></span><i></i>
+        <span>Editing</span><i></i><span><em>Motion design</em></span><i></i><span>Animation</span><i></i><span><em>Sound design</em></span><i></i>
       </div>
     </section>
 
@@ -93,7 +98,7 @@
           <h2 class="sec-title" data-reveal>Stories in <em>widescreen.</em></h2>
         </div>
         <div class="sec-aside" data-fade>
-          <p>Brand films, campaigns, music videos and documentaries — edited for rhythm, graded for mood, mixed to be felt.</p>
+          <p>Brand films, product animations and explainers — edited for rhythm and finished with motion graphics.</p>
         </div>
       </header>
       <div class="films container" id="filmList"></div>
@@ -117,15 +122,14 @@
     <!-- ===================== 03 ABOUT ===================== -->
     <section class="section about container" id="about">
       <p class="eyebrow mono"><span>03</span> About</p>
-      <p class="about-text" id="aboutText">I'm Ensar — a video editor and motion designer who thinks in beats and frames. I help brands and creators turn raw footage into stories that <em>stop the scroll,</em> hold attention and stay with people long after the last cut.</p>
+      <p class="about-text" id="aboutText">I'm Ensar. I spend most of my time editing videos and building motion graphics for brands and creators. I just like taking raw footage and turning it into something <em>clean, sharp, and worth watching.</em></p>
       <div class="stats">
         <div class="stat"><b data-count="150" data-suffix="+">0</b><p class="mono">Projects delivered</p></div>
-        <div class="stat"><b data-count="40" data-suffix="M+">0</b><p class="mono">Organic views</p></div>
         <div class="stat"><b data-count="30" data-suffix="+">0</b><p class="mono">Brands &amp; creators</p></div>
-        <div class="stat"><b data-count="6" data-suffix=" yrs">0</b><p class="mono">Experience</p></div>
+        <div class="stat"><b data-count="6" data-suffix="+ yrs">0</b><p class="mono">Experience</p></div>
       </div>
       <ul class="tools mono">
-        <li>Premiere Pro</li><li>After Effects</li><li>DaVinci Resolve</li><li>Cinema 4D</li><li>Blender</li><li>Audition</li>
+        <li>After Effects</li><li>Premiere Pro</li><li>Illustrator</li><li>Photoshop</li><li>Lightroom</li>
       </ul>
     </section>
 
@@ -138,16 +142,14 @@
           <span class="line line--indent"><span class="split">it</span> <em class="split">move.</em></span>
         </h2>
         <div class="contact-row">
-          <a class="contact-mail" id="contactMail" href="mailto:hello@yourdomain.com" data-cursor="Write">
-            <span id="contactMailText">hello@yourdomain.com</span>
+          <a class="contact-mail" id="contactMail" href="mailto:ensarabdullahu47@gmail.com" data-cursor="Write">
+            <span id="contactMailText">ensarabdullahu47@gmail.com</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
           </a>
           <ul class="socials">
-            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="#" target="_blank" rel="noopener">TikTok</a></li>
-            <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
-            <li><a href="#" target="_blank" rel="noopener">Vimeo</a></li>
-            <li><a href="#" target="_blank" rel="noopener">Behance</a></li>
+            <li><a href="https://www.instagram.com/ensar.abdullahu/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/ensar-abdullahu-esr/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/ensarabd" target="_blank" rel="noopener">Behance</a></li>
           </ul>
         </div>
         <footer class="footer mono">

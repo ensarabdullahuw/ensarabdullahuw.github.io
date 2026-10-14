@@ -117,6 +117,8 @@
     t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
+  const creditOf = item => (item && item.credit !== undefined ? item.credit : SITE.credit) || '';
+  const creditHTML = item => (creditOf(item) ? `<p class="credit">${esc(creditOf(item))}</p>` : '');
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
   // Real video when `src` is set, otherwise a calm placeholder (lighting varies per project)
@@ -151,7 +153,7 @@
       </div>
       <div class="phone-meta">
         <span class="mono">${pad(i + 1)}</span>
-        <div><h3>${esc(p.title)}</h3><p class="mono">${[p.client, p.views && `${p.views} views`].filter(Boolean).map(esc).join(' · ')}</p></div>
+        <div><h3>${esc(p.title)}</h3><p class="mono">${[p.client, p.views && `${p.views} views`].filter(Boolean).map(esc).join(' · ')}</p>${creditHTML(p)}</div>
       </div>
     </article>`).join('');
 
@@ -173,7 +175,7 @@
       <div class="film-timeline"><div class="film-segs">${segs}</div><i class="film-playhead"></i></div>
       <div class="film-info">
         <span class="film-idx mono">${pad(i + 1)}</span>
-        <div><h3 class="film-title">${esc(p.title)}</h3><p class="film-client">${esc(p.client)}</p></div>
+        <div><h3 class="film-title">${esc(p.title)}</h3><p class="film-client">${esc(p.client)}</p>${creditHTML(p)}</div>
         <div class="film-meta mono"><span>${(p.role || []).map(esc).join(' · ')}</span><span>${[p.year, p.duration].filter(Boolean).map(esc).join(' — ')}</span></div>
       </div>
     </article>`;
@@ -303,7 +305,7 @@
     $$('.ph', lbFrame).forEach(el => el.classList.add('in-view'));
     $('#lbMeta').textContent = `${vertical ? '9:16' : '16:9'} · ${item.duration || ''}`;
     $('#lbTitle').textContent = item.title || '';
-    $('#lbSub').textContent = [item.client, item.year].filter(Boolean).join(' — ');
+    $('#lbSub').textContent = [item.client, item.year, creditOf(item)].filter(Boolean).join(' — ');
 
     resumeAfter.length = 0;
     players.forEach(pl => { if (pl.playing) { resumeAfter.push(pl); pause(pl); } });
@@ -351,6 +353,21 @@
   });
   $('#lbClose').addEventListener('click', closeLightbox);
   lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+
+  // Light / dark mode — the choice is remembered on this device
+  const themeBtn = $('#themeToggle');
+  const metaTheme = $('meta[name="theme-color"]');
+  const applyTheme = light => {
+    document.documentElement.dataset.theme = light ? 'light' : 'dark';
+    themeBtn.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+    if (metaTheme) metaTheme.content = light ? '#efeeea' : '#0a0a0a';
+  };
+  applyTheme(document.documentElement.dataset.theme === 'light');
+  themeBtn.addEventListener('click', () => {
+    const light = document.documentElement.dataset.theme !== 'light';
+    applyTheme(light);
+    try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch (e) {}
+  });
 
   /* 6. Boot & smooth scroll ---------------------------------------------- */
   // Without GSAP (CDN blocked) everything still shows, just without motion

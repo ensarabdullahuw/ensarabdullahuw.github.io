@@ -13,7 +13,10 @@
 
 window.SITE = {
   name: 'Ensar Abdullahu',
-  email: 'hello@yourdomain.com',
+  email: 'ensarabdullahu47@gmail.com',
+
+  // Small line shown under every project (a project can override it with its own `credit`)
+  credit: 'Project developed at HoB Studio.',
 
   // Paste your published Google Sheet link (the one ending in output=csv) between the quotes.
   // When it's set, the website reads your videos from the sheet and the list below is only a backup.
