@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ensar Abdullahu — Video Editor & Motion Designer</title>
+  <meta name="description" content="Video editor and motion designer crafting social content and cinematic brand films.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <noscript><style>.loader{display:none}body.is-loading{overflow:auto}</style></noscript>
+</head>
+<body class="is-loading">
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-label"></span></div>
+
+  <!-- ===================== LOADER ===================== -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-panel loader-top"></div>
+    <div class="loader-panel loader-bottom"></div>
+    <div class="loader-inner">
+      <div class="loader-row mono"><span><i class="rec-dot"></i> Rec</span><span class="loader-pct">0%</span></div>
+      <div class="loader-tc mono">00:00:00:00</div>
+      <div class="loader-bar"><i></i></div>
+    </div>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <a href="#top" class="nav-logo site-name" data-scroll>Ensar Abdullahu</a>
+    <div class="nav-tc mono"><i class="rec-dot"></i><span id="navTc">00:00:00:00</span></div>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#films" data-scroll><span data-text="Films">Films</span></a>
+      <a href="#social" data-scroll><span data-text="Social">Social</span></a>
+      <a href="#about" data-scroll><span data-text="About">About</span></a>
+      <a href="#contact" data-scroll class="nav-cta">Let's talk</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"><video class="hero-video" id="heroVideo" muted loop playsinline preload="none"></video></div>
+
+      <div class="viewfinder brackets" aria-hidden="true">
+        <span class="vf-label vf-tl mono"><i class="rec-dot"></i> Rec <b data-live-tc>00:00:00:00</b></span>
+        <span class="vf-label vf-tr mono">4K · 25 fps</span>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-kicker mono">Video editor &amp; motion designer</p>
+        <h1 class="hero-title" aria-label="Cutting frames into feelings.">
+          <span class="line"><span class="split">Cutting</span></span>
+          <span class="line line--indent"><em class="split">frames</em> <span class="split">into</span></span>
+          <span class="line"><span class="split">feelings.</span></span>
+        </h1>
+        <div class="hero-foot">
+          <p class="hero-desc">I edit and animate social content and cinematic brand films — paced to the frame, built to be felt.</p>
+          <p class="hero-status mono"><i class="rec-dot"></i> Available for projects — 2026</p>
+          <a href="#reel" class="scroll-cue mono" data-scroll>Scroll <span class="cue-bar"><i></i></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SHOWREEL ===================== -->
+    <section class="reel" id="reel">
+      <h2 class="reel-word reel-left">Show</h2>
+      <div class="reel-frame">
+        <div class="reel-media" id="reelMedia"></div>
+        <div class="reel-ui mono">
+          <span><i class="rec-dot"></i> Showreel 2026</span>
+          <span data-tc>00:00:00:00</span>
+        </div>
+      </div>
+      <h2 class="reel-word reel-right"><em>reel</em></h2>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <section class="marquee" aria-label="Services">
+      <div class="marquee-track">
+        <span>Editing</span><i></i><span><em>Motion design</em></span><i></i><span>Color grading</span><i></i><span><em>Sound design</em></span><i></i>
+      </div>
+    </section>
+
+    <!-- ===================== 01 FILMS ===================== -->
+    <section class="section films-section" id="films">
+      <header class="sec-head container">
+        <div>
+          <p class="eyebrow mono"><span>01</span> Films · 16:9</p>
+          <h2 class="sec-title" data-reveal>Stories in <em>widescreen.</em></h2>
+        </div>
+        <div class="sec-aside" data-fade>
+          <p>Brand films, campaigns, music videos and documentaries — edited for rhythm, graded for mood, mixed to be felt.</p>
+        </div>
+      </header>
+      <div class="films container" id="filmList"></div>
+    </section>
+
+    <!-- ===================== 02 SOCIAL ===================== -->
+    <section class="section social" id="social">
+      <header class="sec-head container">
+        <div>
+          <p class="eyebrow mono"><span>02</span> Social content · 9:16</p>
+          <h2 class="sec-title" data-reveal>Made for the <em>scroll.</em></h2>
+        </div>
+        <div class="sec-aside" data-fade>
+          <p>Reels, TikToks and Shorts built for the first second — strong hooks, kinetic type and sound-led cuts.</p>
+          <ul class="chips mono"><li>Reels</li><li>TikTok</li><li>Shorts</li></ul>
+        </div>
+      </header>
+      <div class="phones container" id="vTrack"></div>
+    </section>
+
+    <!-- ===================== 03 ABOUT ===================== -->
+    <section class="section about container" id="about">
+      <p class="eyebrow mono"><span>03</span> About</p>
+      <p class="about-text" id="aboutText">I'm Ensar — a video editor and motion designer who thinks in beats and frames. I help brands and creators turn raw footage into stories that <em>stop the scroll,</em> hold attention and stay with people long after the last cut.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="150" data-suffix="+">0</b><p class="mono">Projects delivered</p></div>
+        <div class="stat"><b data-count="40" data-suffix="M+">0</b><p class="mono">Organic views</p></div>
+        <div class="stat"><b data-count="30" data-suffix="+">0</b><p class="mono">Brands &amp; creators</p></div>
+        <div class="stat"><b data-count="6" data-suffix=" yrs">0</b><p class="mono">Experience</p></div>
+      </div>
+      <ul class="tools mono">
+        <li>Premiere Pro</li><li>After Effects</li><li>DaVinci Resolve</li><li>Cinema 4D</li><li>Blender</li><li>Audition</li>
+      </ul>
+    </section>
+
+    <!-- ===================== 04 CONTACT ===================== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <p class="eyebrow mono"><span>04</span> Contact</p>
+        <h2 class="contact-title" aria-label="Let's make it move.">
+          <span class="line"><span class="split">Let's make</span></span>
+          <span class="line line--indent"><span class="split">it</span> <em class="split">move.</em></span>
+        </h2>
+        <div class="contact-row">
+          <a class="contact-mail" id="contactMail" href="mailto:hello@yourdomain.com" data-cursor="Write">
+            <span id="contactMailText">hello@yourdomain.com</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </a>
+          <ul class="socials">
+            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">TikTok</a></li>
+            <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Vimeo</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Behance</a></li>
+          </ul>
+        </div>
+        <footer class="footer mono">
+          <span>© 2026 <span class="site-name">Ensar Abdullahu</span></span>
+          <span>Runtime <b data-runtime>00:00:00:00</b></span>
+          <a href="#top" data-scroll>Back to top ↑</a>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- page progress, styled as a playhead -->
+  <div class="progress" aria-hidden="true"><i id="progressFill"></i></div>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="lb-top mono">
+      <span id="lbMeta"></span>
+      <button class="lb-close" id="lbClose" data-cursor="Close">Close ✕</button>
+    </div>
+    <div class="lb-frame" id="lbFrame"></div>
+    <div class="lb-bottom">
+      <h3 id="lbTitle"></h3>
+      <p class="mono" id="lbSub"></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
